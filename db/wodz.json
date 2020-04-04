@@ -1,0 +1,167 @@
+{
+    "wodz": [
+        {
+            "wod_name": "Tetelle Epaules",
+            "wod_blocks": [
+                {
+                    "wod_block_id": 1,
+                    "wod_block_name": "BLOC MUSCU",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Decline Push-ups Step",
+                            "ex_rep": "15"
+                        },
+                        {
+                            "ex_name": "Dumbbell Shrugs",
+                            "ex_rep": "30"
+                        },
+                        {
+                            "ex_name": "Dumbbell Row",
+                            "ex_rep": "2*15"
+                        },
+                        {
+                            "ex_name": "Dumbbell lateral raise",
+                            "ex_rep": "10"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 2,
+                    "wod_block_name": "BLOC CARDIO",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Step pieds alternés",
+                            "ex_rep": "1'"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 3,
+                    "wod_block_name": "BLOC GAINAGE",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Gainage",
+                            "ex_rep": "1'"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 4,
+                    "wod_block_name": "BLOC VACUUM",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Vacuum",
+                            "ex_rep": "5'"
+                        }
+                    ]
+                }
+            ],
+            "wod_structure": [
+                {
+                    "section_repeat": 3,
+                    "section_blocks": [ 2, 3 ]
+                },
+                {
+                    "section_repeat": 5,
+                    "section_blocks": [ 1, 2 ]
+                },
+                {
+                    "section_repeat": 1,
+                    "section_blocks": [ 4 ]
+                }
+            ]
+        },
+        {
+            "wod_name": "Cyril Pecs"
+        },
+        {
+            "wod_name": "Tetelle Jambes",
+            "wod_blocks": [
+                {
+                    "wod_block_id": 1,
+                    "wod_block_name": "BLOC CARDIO",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Single under",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Gainage",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Single under",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Gainage",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Single under",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Gainage",
+                            "ex_rep": "1'"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 2,
+                    "wod_block_name": "BLOC MUSCU 1",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Crunchs",
+                            "ex_rep": "100"
+                        },
+                        {
+                            "ex_name": "Squats",
+                            "ex_rep": "80"
+                        },
+                        {
+                            "ex_name": "Deadlift",
+                            "ex_rep": "50"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 3,
+                    "wod_block_name": "BLOC MUSCU 2",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Hip thrust",
+                            "ex_rep": "50"
+                        },
+                        {
+                            "ex_name": "Push ups",
+                            "ex_rep": "30"
+                        },
+                        {
+                            "ex_name": "Row crunch",
+                            "ex_rep": "20"
+                        }
+                    ]
+                }
+            ],
+            "wod_structure": [
+                {
+                    "section_repeat": 1,
+                    "section_blocks": [ 1 ]
+                },
+                {
+                    "section_repeat": 2,
+                    "section_blocks": [ 2 ]
+                },
+                {
+                    "section_repeat": 3,
+                    "section_blocks": [ 3 ]
+                },
+                {
+                    "section_repeat": 1,
+                    "section_blocks": [ 1 ]
+                }
+            ]
+        }
+    ]
+}
