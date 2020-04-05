@@ -22,33 +22,79 @@ class JSONReader {
 class Wod {
     name: string;
     structure : Structure;
-    blocks : Array<Block>;
+    blocks : Map<number, Block>;
 
-    constructor(name: string, blocks: Array<Block>) {
+    constructor(name: string, blocks: Map<number, Block>, structure: Structure) {
         this.name = name;
         this.blocks = blocks;
+        this.structure = structure;
     }
 
     toString(): string {
-        let str = "<span class=\"wod\">";
+        let str = "<div class=\"wod\">";
         str += "<h2>" + this.name + "</h2>";
 
         this.blocks.forEach(block => {
             str += block.toString();
         });
 
-        str += "</span>";
+        if (null != this.structure) {
+            str += this.structure.toString();
+        }
+
+        str += "</div>";
         return str;
     }
 }
 
 class Structure {
     groups: Array<Group> = new Array<Group>();
+
+    constructor(groups: Array<Group>) {
+        this.groups = groups;
+    }
+
+    toString(): string {
+        let str = "<div class=\"structure\">";
+        str += "<h3>WOD</h3>";
+        str += "<ul>";
+
+        this.groups.forEach(group => {
+            str += "<li>";
+            str += group.toString();
+            str += "</li>";
+        });
+        str += "</ul>";
+
+        str += "</div>";
+        return str;
+    }
 }
 
 class Group {
-    repet: number;
+    repeat: number;
     blocks: Array<Block> = new Array<Block>();
+
+    constructor(repeat: number, blocks: Array<Block>) {
+        this.repeat = repeat;
+        this.blocks = blocks;
+    }
+
+    toString(): string {
+        let str = "<div class=\"group\">";
+        str += this.repeat + " * ";
+
+        str += "<ul>";
+        this.blocks.forEach(block => {
+            str += "<li>";
+            str += "<span class=\"block_name\">" + block.name + "</span>";
+            str += "</li>";
+        });
+        str += "</ul>";
+
+        str += "</div>";
+        return str;
+    }
 }
 
 class Block {
@@ -61,7 +107,7 @@ class Block {
     }
 
     toString() {
-        let str = "<span class=\"block\">";
+        let str = "<div class=\"block\">";
         str += "<h3>" + this.name + "</h3>";
 
         str += "<ul>"
@@ -72,7 +118,7 @@ class Block {
         });
         str += "</ul>"
 
-        str += "</span>";
+        str += "</div>";
         return str;
     }
 }
@@ -109,16 +155,29 @@ class WodzDisplayer {
 
     private parseWod(wod): Wod {
         let wodName: string = wod.wod_name;
-        let blocks: Array<Block> = new Array<Block>();
+        let blocks: Map<number, Block> = new Map<number, Block>();
+        let groups: Array<Group> = new Array<Group>();
+        let structure: Structure;
 
-        console.log(wod.wod_blocks);
         if (null != wod.wod_blocks) {
             wod.wod_blocks.forEach(block => {
-                blocks.push(this.parseBlock(block));
+                blocks.set(block.wod_block_id, this.parseBlock(block));
             });
         }
 
-        return new Wod(wodName, blocks);
+        if (null != wod.wod_structure) {
+            wod.wod_structure.forEach(group => {
+                let groupBlocks: Array<Block> = new Array<Block>();
+                group.section_blocks.forEach(groupId => {
+                    groupBlocks.push(blocks.get(groupId));
+                });
+
+                groups.push(new Group(group.section_repeat, groupBlocks));
+            });
+            structure = new Structure(groups);
+        }
+
+        return new Wod(wodName, blocks, structure);
     }
 
     private parseBlock(block): Block {

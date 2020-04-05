@@ -1,9 +1,9 @@
-var JSONReader = /** @class */ (function () {
-    function JSONReader(fileName) {
+class JSONReader {
+    constructor(fileName) {
         this.fileName = fileName;
     }
-    JSONReader.prototype.read = function (callback) {
-        var xmlhttp = new XMLHttpRequest();
+    read(callback) {
+        let xmlhttp = new XMLHttpRequest();
         xmlhttp.overrideMimeType("application/json");
         xmlhttp.open("GET", this.fileName, true);
         xmlhttp.onreadystatechange = function () {
@@ -13,154 +13,187 @@ var JSONReader = /** @class */ (function () {
             }
         };
         xmlhttp.send(null);
-    };
-    return JSONReader;
-}());
-var Wod = /** @class */ (function () {
-    function Wod(name, blocks) {
+    }
+}
+class Wod {
+    constructor(name, blocks, structure) {
         this.name = name;
         this.blocks = blocks;
+        this.structure = structure;
     }
-    Wod.prototype.toString = function () {
-        var str = "<span class=\"wod\">";
+    toString() {
+        let str = "<div class=\"wod\">";
         str += "<h2>" + this.name + "</h2>";
-        this.blocks.forEach(function (block) {
+        this.blocks.forEach(block => {
             str += block.toString();
         });
-        str += "</span>";
+        if (null != this.structure) {
+            str += this.structure.toString();
+        }
+        str += "</div>";
         return str;
-    };
-    return Wod;
-}());
-var Structure = /** @class */ (function () {
-    function Structure() {
+    }
+}
+class Structure {
+    constructor(groups) {
         this.groups = new Array();
+        this.groups = groups;
     }
-    return Structure;
-}());
-var Group = /** @class */ (function () {
-    function Group() {
+    toString() {
+        let str = "<div class=\"structure\">";
+        str += "<h3>WOD</h3>";
+        str += "<ul>";
+        this.groups.forEach(group => {
+            str += "<li>";
+            str += group.toString();
+            str += "</li>";
+        });
+        str += "</ul>";
+        str += "</div>";
+        return str;
+    }
+}
+class Group {
+    constructor(repeat, blocks) {
         this.blocks = new Array();
+        this.repeat = repeat;
+        this.blocks = blocks;
     }
-    return Group;
-}());
-var Block = /** @class */ (function () {
-    function Block(name, exercises) {
+    toString() {
+        let str = "<div class=\"group\">";
+        str += this.repeat + " * ";
+        str += "<ul>";
+        this.blocks.forEach(block => {
+            str += "<li>";
+            str += "<span class=\"block_name\">" + block.name + "</span>";
+            str += "</li>";
+        });
+        str += "</ul>";
+        str += "</div>";
+        return str;
+    }
+}
+class Block {
+    constructor(name, exercises) {
         this.name = name;
         this.exercises = exercises;
     }
-    Block.prototype.toString = function () {
-        var str = "<span class=\"block\">";
+    toString() {
+        let str = "<div class=\"block\">";
         str += "<h3>" + this.name + "</h3>";
         str += "<ul>";
-        this.exercises.forEach(function (ex) {
+        this.exercises.forEach(ex => {
             str += "<li>";
             str += ex.toString();
             str += "</li>";
         });
         str += "</ul>";
-        str += "</span>";
+        str += "</div>";
         return str;
-    };
-    return Block;
-}());
-var Exercise = /** @class */ (function () {
-    function Exercise(name, repetition) {
+    }
+}
+class Exercise {
+    constructor(name, repetition) {
         this.name = name;
         this.repetition = repetition;
     }
-    Exercise.prototype.toString = function () {
-        var str = "<span class=\"exercise\">";
+    toString() {
+        let str = "<span class=\"exercise\">";
         str += this.name;
         str += " (" + this.repetition + ")";
         str += "</span>";
         return str;
-    };
-    return Exercise;
-}());
-var WodzDisplayer = /** @class */ (function () {
-    function WodzDisplayer() {
+    }
+}
+class WodzDisplayer {
+    constructor() {
         this.wodz = new Array();
         this.exercises = new Array();
     }
-    WodzDisplayer.prototype.prepareData = function (data) {
-        var _this = this;
-        data.wodz.forEach(function (wod) {
-            _this.wodz.push(_this.parseWod(wod));
+    prepareData(data) {
+        data.wodz.forEach(wod => {
+            this.wodz.push(this.parseWod(wod));
         });
-    };
-    WodzDisplayer.prototype.parseWod = function (wod) {
-        var _this = this;
-        var wodName = wod.wod_name;
-        var blocks = new Array();
-        console.log(wod.wod_blocks);
+    }
+    parseWod(wod) {
+        let wodName = wod.wod_name;
+        let blocks = new Map();
+        let groups = new Array();
+        let structure;
         if (null != wod.wod_blocks) {
-            wod.wod_blocks.forEach(function (block) {
-                blocks.push(_this.parseBlock(block));
+            wod.wod_blocks.forEach(block => {
+                blocks.set(block.wod_block_id, this.parseBlock(block));
             });
         }
-        return new Wod(wodName, blocks);
-    };
-    WodzDisplayer.prototype.parseBlock = function (block) {
-        var _this = this;
-        var blockName = block.wod_block_name;
-        var blockExercises = new Array();
+        if (null != wod.wod_structure) {
+            wod.wod_structure.forEach(group => {
+                let groupBlocks = new Array();
+                group.section_blocks.forEach(groupId => {
+                    groupBlocks.push(blocks.get(groupId));
+                });
+                groups.push(new Group(group.section_repeat, groupBlocks));
+            });
+            structure = new Structure(groups);
+        }
+        return new Wod(wodName, blocks, structure);
+    }
+    parseBlock(block) {
+        let blockName = block.wod_block_name;
+        let blockExercises = new Array();
         if (null != block.wod_block_ex) {
-            block.wod_block_ex.forEach(function (exercise) {
-                blockExercises.push(_this.parseExercise(exercise));
+            block.wod_block_ex.forEach(exercise => {
+                blockExercises.push(this.parseExercise(exercise));
             });
         }
         return new Block(blockName, blockExercises);
-    };
-    WodzDisplayer.prototype.parseExercise = function (exercise) {
+    }
+    parseExercise(exercise) {
         return new Exercise(exercise.ex_name, exercise.ex_rep);
-    };
+    }
     /*
      * Display the wod data in the HTML page.
      */
-    WodzDisplayer.prototype.display = function () {
-        var wodDiv = document.getElementById(WodzDisplayer.WODZ_DIV_ID);
+    display() {
+        let wodDiv = document.getElementById(WodzDisplayer.WODZ_DIV_ID);
         wodDiv.innerHTML = this.generateWodzListHTML();
-    };
+    }
     /*
      * Generate the HTML structure for the wodz data.
      */
-    WodzDisplayer.prototype.generateWodzListHTML = function () {
-        var wodzHTML = "";
-        this.wodz.forEach(function (wod) {
+    generateWodzListHTML() {
+        let wodzHTML = "";
+        this.wodz.forEach(wod => {
             wodzHTML += wod.toString();
         });
         return wodzHTML;
-    };
-    WodzDisplayer.WODZ_DIV_ID = "wodz_page";
-    return WodzDisplayer;
-}());
-var App = /** @class */ (function () {
-    function App() {
+    }
+}
+WodzDisplayer.WODZ_DIV_ID = "wodz_page";
+class App {
+    constructor() {
         this.wodzDisplayer = new WodzDisplayer();
     }
-    App.prototype.main = function () {
+    main() {
         this.readData();
-    };
-    App.prototype.getWodzDisplayer = function () {
+    }
+    getWodzDisplayer() {
         return this.wodzDisplayer;
-    };
+    }
     /*
      * Read wodz object from json file.
      */
-    App.prototype.readData = function () {
-        var reader = new JSONReader(App.DB_FILE_PATH);
+    readData() {
+        let reader = new JSONReader(App.DB_FILE_PATH);
         reader.read(function (wd, response) {
-            var data = JSON.parse(response);
+            let data = JSON.parse(response);
             wd.prepareData(data);
             wd.display();
         });
-    };
-    App.DB_FILE_PATH = "db/wodz.json";
-    return App;
-}());
+    }
+}
+App.DB_FILE_PATH = "db/wodz.json";
 /*
  * Program entry point.
  */
-var app = new App();
+let app = new App();
 app.main();
