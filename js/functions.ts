@@ -82,11 +82,11 @@ class Group {
 
     toString(): string {
         let str = "<div class=\"group\">";
-        str += this.repeat + " * ";
+        str += "<span class=\"block_repeat\">" + this.repeat + "</span>";
 
-        str += "<ul>";
+        str += "<ul class=\"block_ul\">";
         this.blocks.forEach(block => {
-            str += "<li>";
+            str += "<li class=\"block_li\">";
             str += "<span class=\"block_name\">" + block.name + "</span>";
             str += "</li>";
         });
@@ -107,12 +107,13 @@ class Block {
     }
 
     toString() {
-        let str = "<div class=\"block\">";
+        //let str = "<div class=\"block\">";
+        let str = "";
         str += "<h3>" + this.name + "</h3>";
 
-        str += "<ul>"
+        str += "<ul class=\"ex_ul\">"
         this.exercises.forEach(ex => {
-            str += "<li>"
+            str += "<li class=\"ex_li\">";
             str += ex.toString();
             str += "</li>"
         });
@@ -134,8 +135,8 @@ class Exercise {
 
     toString(): string {
         let str = "<span class=\"exercise\">";
-        str += this.name;
-        str += " (" + this.repetition + ")";
+        str += "<span class=\"ex_repeat\">" + this.repetition + "</span>";
+        str += "<span class=\"ex_name\">" + this.name + "</span>";
         str += "</span>";
         return str;
     }

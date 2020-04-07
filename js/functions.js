@@ -60,16 +60,15 @@ class Group {
         this.blocks = blocks;
     }
     toString() {
-        let str = "<div class=\"group\">";
-        str += this.repeat + " * ";
-        str += "<ul>";
+        let str = "";
+        str += "<table>";
+        str += "</table>";
+        str += "<ul class=\"block_ul\">";
+        str += "<span class=\"block_repeat\">" + this.repeat + "</span>";
         this.blocks.forEach(block => {
-            str += "<li>";
             str += "<span class=\"block_name\">" + block.name + "</span>";
-            str += "</li>";
         });
         str += "</ul>";
-        str += "</div>";
         return str;
     }
 }
@@ -81,9 +80,9 @@ class Block {
     toString() {
         let str = "<div class=\"block\">";
         str += "<h3>" + this.name + "</h3>";
-        str += "<ul>";
+        str += "<ul class=\"ex_ul\">";
         this.exercises.forEach(ex => {
-            str += "<li>";
+            str += "<li class=\"ex_li\">";
             str += ex.toString();
             str += "</li>";
         });
@@ -99,8 +98,8 @@ class Exercise {
     }
     toString() {
         let str = "<span class=\"exercise\">";
-        str += this.name;
-        str += " (" + this.repetition + ")";
+        str += "<span class=\"ex_repeat\">" + this.repetition + "</span>";
+        str += "<span class=\"ex_name\">" + this.name + "</span>";
         str += "</span>";
         return str;
     }
