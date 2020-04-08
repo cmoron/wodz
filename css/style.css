@@ -10,7 +10,7 @@ h2 {
     color: #fff;
     background: #a00;
     padding: 5px 5px 5px 20px;
-
+    cursor: pointer;
 }
 
 h3 {
@@ -35,33 +35,24 @@ h3 {
     width: 50px;
 }
 
-.structure ul li {
-    list-style-type: none;
-    /*background: #fcc;*/
+.structure_content {
+    padding-left: 40px; /* Default ul padding. */
 }
 
-.block_li {
-    list-style-type: none;
-    background: #ffa;
-    /*margin-bottom: 5px;*/
+table{
+    width: 100%;
+    border-collapse:separate;
+    border-spacing: 0 5px;
 }
-
-.block_ul {
-    padding-left: 0;
-    /*margin-left: 60px;*/
-}
-
-.block_repeat {
-    background: #500;
+th {
+    background: #a00;
     color: #fff;
-    display: inline-block;
-    padding: 10px 0px 10px 0px;
     text-align: center;
+    padding: 0px 0px 0px 0px;
     width: 50px;
 }
 
-.block_name {
+td {
     background: #fcc;
-    padding: 10px;
-    width: 100%;
+    padding-left: 10px;
 }

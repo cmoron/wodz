@@ -1,7 +1,7 @@
 {
     "wodz": [
         {
-            "wod_name": "Tetelle Epaules",
+            "wod_name": "Tetelle épaules",
             "wod_blocks": [
                 {
                     "wod_block_id": 1,
@@ -72,58 +72,7 @@
             ]
         },
         {
-            "wod_name": "Cyril Pecs / dos",
-            "wod_blocks": [
-                {
-                    "wod_block_id": 1,
-                    "wod_block_name": "BLOC CARDIO",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Single under",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Plank",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Jumping Jack",
-                            "ex_rep": "1'"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 2,
-                    "wod_block_name": "BLOC MUSCU",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Push ups",
-                            "ex_rep": "150"
-                        },
-                        {
-                            "ex_name": "Dumbell hammer curls",
-                            "ex_rep": "50"
-                        },
-                        {
-                            "ex_name": "Pull ups",
-                            "ex_rep": "50"
-                        }
-                    ]
-                }
-            ],
-            "wod_structure": [
-                {
-                    "section_repeat": 6,
-                    "section_blocks": [ 1 ]
-                },
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 2 ]
-                }
-            ]
-        },
-        {
-            "wod_name": "Tetelle Jambes",
+            "wod_name": "Tetelle jambes",
             "wod_blocks": [
                 {
                     "wod_block_id": 1,
@@ -208,6 +157,359 @@
                 {
                     "section_repeat": 1,
                     "section_blocks": [ 1 ]
+                }
+            ]
+        },
+        {
+            "wod_name": "Tetelle jambes 2",
+            "wod_blocks": [
+                {
+                    "wod_block_id": 1,
+                    "wod_block_name": "BLOC CARDIO",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Montées de genoux stepper",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Jumping Jacks",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Boxing warm up",
+                            "ex_rep": "1'"
+                        } 
+                    ]
+                },
+                {
+                    "wod_block_id": 2,
+                    "wod_block_name": "BLOC MUSCU",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Fentes haltères",
+                            "ex_rep": "2*10"
+                        },
+                        {
+                            "ex_name": "Deadlift Kettlebell",
+                            "ex_rep": "30"
+                        },
+                        {
+                            "ex_name": "Hip thrust one leg",
+                            "ex_rep": "2*10"
+                        },
+                        {
+                            "ex_name": "Squats chargés (60kg)",
+                            "ex_rep": "5"
+                        },
+                        {
+                            "ex_name": "Plank",
+                            "ex_rep": "1'"
+                        }
+                    ]
+                }
+            ],
+            "wod_structure": [
+                {
+                    "section_repeat": 2,
+                    "section_blocks": [ 1 ]
+                },
+                {
+                    "section_repeat": 5,
+                    "section_blocks": [ 2 ]
+                },
+                {
+                    "section_repeat": 2,
+                    "section_blocks": [ 1 ]
+                } 
+            ]
+        },
+        {
+            "wod_name": "Tetelle abdos",
+            "wod_blocks": [
+                {
+                    "wod_block_id": 1,
+                    "wod_block_name": "BLOC WARM UP",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Étirements abdos",
+                            "ex_rep": "5'"
+                        },
+                        {
+                            "ex_name": "Vacuum",
+                            "ex_rep": "5'"
+                        } 
+                    ]
+                },
+                {
+                    "wod_block_id": 2,
+                    "wod_block_name": "BLOC CARDIO",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Single under",
+                            "ex_rep": "1'30"
+                        },
+                        {
+                            "ex_name": "Plank",
+                            "ex_rep": "1'30"
+                        },
+                        {
+                            "ex_name": "Single under",
+                            "ex_rep": "1'30"
+                        },
+                        {
+                            "ex_name": "Plank",
+                            "ex_rep": "1'30"
+                        },
+                        {
+                            "ex_name": "Single under",
+                            "ex_rep": "1'30"
+                        },
+                        {
+                            "ex_name": "Plank",
+                            "ex_rep": "1'30"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 3,
+                    "wod_block_name": "BLOC MUSCU 1",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Horloge jambes obliques",
+                            "ex_rep": "10"
+                        },
+                        {
+                            "ex_name": "Crunchs obliques",
+                            "ex_rep": "2*50"
+                        },
+                        {
+                            "ex_name": "Obliques kettlebell",
+                            "ex_rep": "2*30"
+                        },
+                        {
+                            "ex_name": "Superman",
+                            "ex_rep": "20\""
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 4,
+                    "wod_block_name": "BLOC MUSCU 2",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Crunchs",
+                            "ex_rep": "100"
+                        },
+                        {
+                            "ex_name": "Relevés jambes tendus à 2",
+                            "ex_rep": "10"
+                        }
+                    ]
+                }
+            ],
+            "wod_structure": [
+                {
+                    "section_repeat": 1,
+                    "section_blocks": [ 1 ]
+                },
+                {
+                    "section_repeat": 1,
+                    "section_blocks": [ 2 ]
+                },
+                {
+                    "section_repeat": 3,
+                    "section_blocks": [ 3 ]
+                },
+                {
+                    "section_repeat": 3,
+                    "section_blocks": [ 4 ]
+                }
+            ]
+        },
+        {
+            "wod_name": "Tetelle upper body",
+            "wod_blocks": [
+                {
+                    "wod_block_id": 1,
+                    "wod_block_name": "BLOC CARDIO",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Mountain climber (20-20-20)",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Push ups",
+                            "ex_rep": "15(10)"
+                        },
+                        {
+                            "ex_name": "Mountain climber (20-20-20)",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Push ups",
+                            "ex_rep": "15(10)"
+                        },
+                        {
+                            "ex_name": "Mountain climber (20-20-20)",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Push ups",
+                            "ex_rep": "15(10)"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 2,
+                    "wod_block_name": "BLOC MUSCU",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Curls biceps",
+                            "ex_rep": "20"
+                        },
+                        {
+                            "ex_name": "Pull ups",
+                            "ex_rep": "7(5)"
+                        },
+                        {
+                            "ex_name": "Plank",
+                            "ex_rep": "1'"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 3,
+                    "wod_block_name": "BLOC MUSCU 2",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Développé Arnold",
+                            "ex_rep": "20"
+                        },
+                        {
+                            "ex_name": "Triceps Kettlebell",
+                            "ex_rep": "20"
+                        },
+                        {
+                            "ex_name": "Plank",
+                            "ex_rep": "1'"
+                        }
+                    ]
+                }
+            ],
+            "wod_structure": [
+                {
+                    "section_repeat": 1,
+                    "section_blocks": [ 1 ]
+                },
+                {
+                    "section_repeat": 3,
+                    "section_blocks": [ 2 ]
+                },
+                {
+                    "section_repeat": 1,
+                    "section_blocks": [ 1 ]
+                },
+                {
+                    "section_repeat": 3,
+                    "section_blocks": [ 3 ]
+                },
+                {
+                    "section_repeat": 1,
+                    "section_blocks": [ 1 ]
+                }
+            ]
+        },
+        {
+            "wod_name": "Cyril pecs / dos",
+            "wod_blocks": [
+                {
+                    "wod_block_id": 1,
+                    "wod_block_name": "BLOC CARDIO",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Single under",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Plank",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Jumping Jack",
+                            "ex_rep": "1'"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 2,
+                    "wod_block_name": "BLOC MUSCU",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Push ups",
+                            "ex_rep": "150"
+                        },
+                        {
+                            "ex_name": "Dumbell hammer curls",
+                            "ex_rep": "50"
+                        },
+                        {
+                            "ex_name": "Pull ups",
+                            "ex_rep": "50"
+                        }
+                    ]
+                }
+            ],
+            "wod_structure": [
+                {
+                    "section_repeat": 6,
+                    "section_blocks": [ 1 ]
+                },
+                {
+                    "section_repeat": 1,
+                    "section_blocks": [ 2 ]
+                }
+            ]
+        },
+        {
+            "wod_name": "Cyril Boxe",
+            "wod_blocks": [
+                {
+                    "wod_block_id": 1,
+                    "wod_block_name": "BLOC CARDIO",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Boxing warm up",
+                            "ex_rep": "30\""
+                        },
+                        {
+                            "ex_name": "Push ups",
+                            "ex_rep": "10"
+                        },
+                        {
+                            "ex_name": "Air squats",
+                            "ex_rep": "20"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 2,
+                    "wod_block_name": "BLOC BOXE",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Boxe training",
+                            "ex_rep": "1"
+                        }
+                    ]
+                }
+            ],
+            "wod_structure": [
+                {
+                    "section_repeat": 10,
+                    "section_blocks": [ 1 ]
+                },
+                {
+                    "section_repeat": 1,
+                    "section_blocks": [ 2 ]
                 }
             ]
         }

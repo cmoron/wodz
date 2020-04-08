@@ -17,23 +17,46 @@ class JSONReader {
 }
 class Wod {
     constructor(name, blocks, structure) {
+        this.display = false;
+        this.id = "wod_" + ++Wod.lastId;
         this.name = name;
         this.blocks = blocks;
         this.structure = structure;
     }
-    toString() {
-        let str = "<div class=\"wod\">";
-        str += "<h2>" + this.name + "</h2>";
-        this.blocks.forEach(block => {
-            str += block.toString();
-        });
-        if (null != this.structure) {
-            str += this.structure.toString();
+    initEvents() {
+        let elem = document.getElementById(this.id);
+        elem.addEventListener("click", (e) => this.switchDisplay());
+    }
+    switchDisplay() {
+        this.display = !this.display;
+        let elem = document.getElementById(this.id);
+        console.log(elem);
+        if (null != elem) {
+            elem.innerHTML = this.displayWodContent();
         }
+    }
+    displayWodContent() {
+        let str = "<h2>" + this.name + "</h2>";
+        if (this.display) {
+            str += "<div class=\"wod_content\">";
+            this.blocks.forEach(block => {
+                str += block.toString();
+            });
+            if (null != this.structure) {
+                str += this.structure.toString();
+            }
+            str += "</div>";
+        }
+        return str;
+    }
+    toString() {
+        let str = "<div class=\"wod\" id=\"" + this.id + "\">";
+        str += this.displayWodContent();
         str += "</div>";
         return str;
     }
 }
+Wod.lastId = 0;
 class Structure {
     constructor(groups) {
         this.groups = new Array();
@@ -42,14 +65,15 @@ class Structure {
     toString() {
         let str = "<div class=\"structure\">";
         str += "<h3>WOD</h3>";
-        str += "<ul>";
+        str += "<div class=\"structure_content\">";
+        str += "<table>";
         this.groups.forEach(group => {
-            str += "<li>";
+            str += "<tr>";
             str += group.toString();
-            str += "</li>";
+            str += "</tr>";
         });
-        str += "</ul>";
-        str += "</div>";
+        str += "</table>";
+        str += "</div></div>";
         return str;
     }
 }
@@ -61,14 +85,14 @@ class Group {
     }
     toString() {
         let str = "";
-        str += "<table>";
-        str += "</table>";
-        str += "<ul class=\"block_ul\">";
-        str += "<span class=\"block_repeat\">" + this.repeat + "</span>";
+        str += "<th>" + this.repeat + "</th>";
+        str += "<td>";
         this.blocks.forEach(block => {
-            str += "<span class=\"block_name\">" + block.name + "</span>";
+            str += "<p>";
+            str += block.name;
+            str += "</p>";
         });
-        str += "</ul>";
+        str += "</td>";
         return str;
     }
 }
@@ -78,7 +102,7 @@ class Block {
         this.exercises = exercises;
     }
     toString() {
-        let str = "<div class=\"block\">";
+        let str = "";
         str += "<h3>" + this.name + "</h3>";
         str += "<ul class=\"ex_ul\">";
         this.exercises.forEach(ex => {
@@ -87,7 +111,6 @@ class Block {
             str += "</li>";
         });
         str += "</ul>";
-        str += "</div>";
         return str;
     }
 }
@@ -166,6 +189,11 @@ class WodzDisplayer {
         });
         return wodzHTML;
     }
+    initEvents() {
+        this.wodz.forEach(wod => {
+            wod.initEvents();
+        });
+    }
 }
 WodzDisplayer.WODZ_DIV_ID = "wodz_page";
 class App {
@@ -187,6 +215,7 @@ class App {
             let data = JSON.parse(response);
             wd.prepareData(data);
             wd.display();
+            wd.initEvents();
         });
     }
 }
