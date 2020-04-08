@@ -22,6 +22,7 @@ class JSONReader {
 class Wod {
     public static lastId: number = 0;
     id: string;
+    eventId: string;
     name: string;
     structure : Structure;
     blocks : Map<number, Block>;
@@ -29,14 +30,15 @@ class Wod {
 
     constructor(name: string, blocks: Map<number, Block>, structure: Structure) {
         this.id = "wod_" + ++Wod.lastId;
+        this.eventId = "wod_event_" + this.id;
         this.name = name;
         this.blocks = blocks;
         this.structure = structure;
     }
 
     initEvents() {
-        let elem = document.getElementById(this.id);
-        elem.addEventListener("click", (e:Event) => this.switchDisplay());
+        let evElem = document.getElementById(this.eventId);
+        evElem.addEventListener("click", (e:Event) => this.switchDisplay());
     }
 
     switchDisplay() {
@@ -49,9 +51,8 @@ class Wod {
     }
 
     displayWodContent(): string {
-        let str = "<h2>" + this.name + "</h2>";
+        let str = "";
         if (this.display) {
-            str += "<div class=\"wod_content\">";
             this.blocks.forEach(block => {
                 str += block.toString();
             });
@@ -59,15 +60,17 @@ class Wod {
             if (null != this.structure) {
                 str += this.structure.toString();
             }
-            str += "</div>";
         }
 
         return str;
     }
 
     toString(): string {
-        let str = "<div class=\"wod\" id=\"" + this.id + "\">";
+        let str = "<div class=\"wod\">";
+        str = "<h2 id=\""+ this.eventId + "\">" + this.name + "</h2>";
+        str += "<div class=\"wod_content\" id=\"" + this.id + "\">";
         str += this.displayWodContent();
+        str += "</div>";
         str += "</div>";
         return str;
     }

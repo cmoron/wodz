@@ -19,39 +19,40 @@ class Wod {
     constructor(name, blocks, structure) {
         this.display = false;
         this.id = "wod_" + ++Wod.lastId;
+        this.eventId = "wod_event_" + this.id;
         this.name = name;
         this.blocks = blocks;
         this.structure = structure;
     }
     initEvents() {
-        let elem = document.getElementById(this.id);
-        elem.addEventListener("click", (e) => this.switchDisplay());
+        let evElem = document.getElementById(this.eventId);
+        evElem.addEventListener("click", (e) => this.switchDisplay());
     }
     switchDisplay() {
         this.display = !this.display;
         let elem = document.getElementById(this.id);
-        console.log(elem);
         if (null != elem) {
             elem.innerHTML = this.displayWodContent();
         }
     }
     displayWodContent() {
-        let str = "<h2>" + this.name + "</h2>";
+        let str = "";
         if (this.display) {
-            str += "<div class=\"wod_content\">";
             this.blocks.forEach(block => {
                 str += block.toString();
             });
             if (null != this.structure) {
                 str += this.structure.toString();
             }
-            str += "</div>";
         }
         return str;
     }
     toString() {
-        let str = "<div class=\"wod\" id=\"" + this.id + "\">";
+        let str = "<div class=\"wod\">";
+        str = "<h2 id=\"" + this.eventId + "\">" + this.name + "</h2>";
+        str += "<div class=\"wod_content\" id=\"" + this.id + "\">";
         str += this.displayWodContent();
+        str += "</div>";
         str += "</div>";
         return str;
     }
