@@ -512,6 +512,81 @@
                     "section_blocks": [ 2 ]
                 }
             ]
+        },
+        {
+            "wod_name": "Estelle abdos/fessiers - isométrique",
+            "wod_blocks": [
+                {
+                    "wod_block_id": 1,
+                    "wod_block_name": "BLOC ÉTIREMENTS",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Étirement fessiers pyramidal",
+                            "ex_rep": "Libre
+                        },
+                        {
+                            "ex_name": "Étirement fessiers et psoas",
+                            "ex_rep": "Libre"
+                        },
+                        {
+                            "ex_name": "Étirements pelvi-trochantérien",
+                            "ex_rep": "Libre"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 2,
+                    "wod_block_name": "BLOC MUSCU",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Gainage vélo chargé",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Chaise 45° sans mur",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Fire hydrants chargés (*2)",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Hip Thrust 1 leg (*2)",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Deadlift",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Gainage dos",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Abduction jambe gainage latéral chargé",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Hollow body hold",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Superman",
+                            "ex_rep": "1'"
+                        },
+                    ]
+                }
+            ],
+            "wod_structure": [
+                {
+                    "section_repeat": 1,
+                    "section_blocks": [ 1 ]
+                },
+                {
+                    "section_repeat": 5,
+                    "section_blocks": [ 2 ]
+                }
+            ]
         }
     ]
 }
