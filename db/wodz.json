@@ -522,7 +522,7 @@
                     "wod_block_ex": [
                         {
                             "ex_name": "Étirement fessiers pyramidal",
-                            "ex_rep": "Libre
+                            "ex_rep": "Libre"
                         },
                         {
                             "ex_name": "Étirement fessiers et psoas",
@@ -573,7 +573,7 @@
                         {
                             "ex_name": "Superman",
                             "ex_rep": "1'"
-                        },
+                        }
                     ]
                 }
             ],
