@@ -522,7 +522,7 @@
                     "wod_block_ex": [
                         {
                             "ex_name": "Étirement fessiers pyramidal",
-                            "ex_rep": "Libre
+                            "ex_rep": "Libre"
                         },
                         {
                             "ex_name": "Étirement fessiers et psoas",
@@ -573,7 +573,7 @@
                         {
                             "ex_name": "Superman",
                             "ex_rep": "1'"
-                        },
+                        }
                     ]
                 }
             ],
@@ -585,6 +585,57 @@
                 {
                     "section_repeat": 5,
                     "section_blocks": [ 2 ]
+                }
+            ]
+        },
+        {
+            "wod_name": "Estelle cardio",
+            "wod_blocks": [
+                {
+                    "wod_block_id": 1,
+                    "wod_block_name": "BLOC EF",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Stepper standard",
+                            "ex_rep": "5'"
+                        },
+                        {
+                            "ex_name": "Plank",
+                            "ex_rep": "1'"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 2,
+                    "wod_block_name": "BLOC TEMPO",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Burpees",
+                            "ex_rep": "2'"
+                        },
+                        {
+                            "ex_name": "Single under",
+                            "ex_rep": "2'"
+                        },
+                        {
+                            "ex_name": "Recup",
+                            "ex_rep": "2'"
+                        }
+                    ]
+                }
+            ],
+            "wod_structure": [
+                {
+                    "section_repeat": 4,
+                    "section_blocks": [ 1 ]
+                },
+                {
+                    "section_repeat": 3,
+                    "section_blocks": [ 2 ]
+                },
+                {
+                    "section_repeat": 4,
+                    "section_blocks": [ 1 ]
                 }
             ]
         }
