@@ -26,7 +26,9 @@ class Wod {
     }
     initEvents() {
         let evElem = document.getElementById(this.eventId);
-        evElem.addEventListener("click", (e) => this.switchDisplay());
+        if (null != evElem) {
+            evElem.addEventListener("click", (e) => this.switchDisplay());
+        }
     }
     switchDisplay() {
         this.display = !this.display;
@@ -131,7 +133,6 @@ class Exercise {
 class WodzDisplayer {
     constructor() {
         this.wodz = new Array();
-        this.exercises = new Array();
     }
     prepareData(data) {
         data.wodz.forEach(wod => {
@@ -178,7 +179,9 @@ class WodzDisplayer {
      */
     display() {
         let wodDiv = document.getElementById(WodzDisplayer.WODZ_DIV_ID);
-        wodDiv.innerHTML = this.generateWodzListHTML();
+        if (null != wodDiv) {
+            wodDiv.innerHTML = this.generateWodzListHTML();
+        }
     }
     /*
      * Generate the HTML structure for the wodz data.

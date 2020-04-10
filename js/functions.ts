@@ -38,7 +38,9 @@ class Wod {
 
     initEvents() {
         let evElem = document.getElementById(this.eventId);
-        evElem.addEventListener("click", (e:Event) => this.switchDisplay());
+        if (null != evElem) {
+            evElem.addEventListener("click", (e:Event) => this.switchDisplay());
+        }
     }
 
     switchDisplay() {
@@ -173,7 +175,6 @@ class WodzDisplayer {
 
     private static readonly WODZ_DIV_ID = "wodz_page";
     private wodz: Array<Wod> = new Array<Wod>();
-    private exercises: Array<Exercise> = new Array<Exercise>();
 
     public prepareData(data) {
         data.wodz.forEach(wod => {
@@ -229,8 +230,10 @@ class WodzDisplayer {
      * Display the wod data in the HTML page.
      */
     public display() {
-        let wodDiv: Element = document.getElementById(WodzDisplayer.WODZ_DIV_ID);
-        wodDiv.innerHTML = this.generateWodzListHTML();
+        let wodDiv= document.getElementById(WodzDisplayer.WODZ_DIV_ID);
+        if (null != wodDiv) {
+            wodDiv.innerHTML = this.generateWodzListHTML();
+        }
     }
 
     /*
@@ -272,7 +275,7 @@ class App {
         let reader: JSONReader = new JSONReader(App.DB_FILE_PATH);
 
         reader.read(function(wd: WodzDisplayer, response: string) {
-            let data = JSON.parse(response);
+            let data: Object = JSON.parse(response);
             wd.prepareData(data);
             wd.display();
             wd.initEvents();

@@ -1,7 +1,7 @@
 {
     "wodz": [
         {
-            "wod_name": "Tetelle épaules",
+            "wod_name": "Estelle épaules",
             "wod_blocks": [
                 {
                     "wod_block_id": 1,
@@ -72,7 +72,7 @@
             ]
         },
         {
-            "wod_name": "Tetelle jambes",
+            "wod_name": "Estelle jambes",
             "wod_blocks": [
                 {
                     "wod_block_id": 1,
@@ -161,7 +161,7 @@
             ]
         },
         {
-            "wod_name": "Tetelle jambes 2",
+            "wod_name": "Estelle jambes 2",
             "wod_blocks": [
                 {
                     "wod_block_id": 1,
@@ -224,7 +224,7 @@
             ]
         },
         {
-            "wod_name": "Tetelle abdos",
+            "wod_name": "Estelle abdos",
             "wod_blocks": [
                 {
                     "wod_block_id": 1,
@@ -327,7 +327,7 @@
             ]
         },
         {
-            "wod_name": "Tetelle upper body",
+            "wod_name": "Estelle upper body",
             "wod_blocks": [
                 {
                     "wod_block_id": 1,
@@ -416,100 +416,6 @@
                 {
                     "section_repeat": 1,
                     "section_blocks": [ 1 ]
-                }
-            ]
-        },
-        {
-            "wod_name": "Cyril pecs / dos",
-            "wod_blocks": [
-                {
-                    "wod_block_id": 1,
-                    "wod_block_name": "BLOC CARDIO",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Single under",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Plank",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Jumping Jack",
-                            "ex_rep": "1'"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 2,
-                    "wod_block_name": "BLOC MUSCU",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Push ups",
-                            "ex_rep": "150"
-                        },
-                        {
-                            "ex_name": "Dumbell hammer curls",
-                            "ex_rep": "50"
-                        },
-                        {
-                            "ex_name": "Pull ups",
-                            "ex_rep": "50"
-                        }
-                    ]
-                }
-            ],
-            "wod_structure": [
-                {
-                    "section_repeat": 6,
-                    "section_blocks": [ 1 ]
-                },
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 2 ]
-                }
-            ]
-        },
-        {
-            "wod_name": "Cyril Boxe",
-            "wod_blocks": [
-                {
-                    "wod_block_id": 1,
-                    "wod_block_name": "BLOC CARDIO",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Boxing warm up",
-                            "ex_rep": "30\""
-                        },
-                        {
-                            "ex_name": "Push ups",
-                            "ex_rep": "10"
-                        },
-                        {
-                            "ex_name": "Air squats",
-                            "ex_rep": "20"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 2,
-                    "wod_block_name": "BLOC BOXE",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Boxe training",
-                            "ex_rep": "1"
-                        }
-                    ]
-                }
-            ],
-            "wod_structure": [
-                {
-                    "section_repeat": 10,
-                    "section_blocks": [ 1 ]
-                },
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 2 ]
                 }
             ]
         },
@@ -636,6 +542,100 @@
                 {
                     "section_repeat": 4,
                     "section_blocks": [ 1 ]
+                }
+            ]
+        },
+        {
+            "wod_name": "Cyril pecs / dos",
+            "wod_blocks": [
+                {
+                    "wod_block_id": 1,
+                    "wod_block_name": "BLOC CARDIO",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Single under",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Plank",
+                            "ex_rep": "1'"
+                        },
+                        {
+                            "ex_name": "Jumping Jack",
+                            "ex_rep": "1'"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 2,
+                    "wod_block_name": "BLOC MUSCU",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Push ups",
+                            "ex_rep": "150"
+                        },
+                        {
+                            "ex_name": "Dumbell hammer curls",
+                            "ex_rep": "50"
+                        },
+                        {
+                            "ex_name": "Pull ups",
+                            "ex_rep": "50"
+                        }
+                    ]
+                }
+            ],
+            "wod_structure": [
+                {
+                    "section_repeat": 6,
+                    "section_blocks": [ 1 ]
+                },
+                {
+                    "section_repeat": 1,
+                    "section_blocks": [ 2 ]
+                }
+            ]
+        },
+        {
+            "wod_name": "Cyril Boxe",
+            "wod_blocks": [
+                {
+                    "wod_block_id": 1,
+                    "wod_block_name": "BLOC CARDIO",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Boxing warm up",
+                            "ex_rep": "30\""
+                        },
+                        {
+                            "ex_name": "Push ups",
+                            "ex_rep": "10"
+                        },
+                        {
+                            "ex_name": "Air squats",
+                            "ex_rep": "20"
+                        }
+                    ]
+                },
+                {
+                    "wod_block_id": 2,
+                    "wod_block_name": "BLOC BOXE",
+                    "wod_block_ex": [
+                        {
+                            "ex_name": "Boxe training",
+                            "ex_rep": "1"
+                        }
+                    ]
+                }
+            ],
+            "wod_structure": [
+                {
+                    "section_repeat": 10,
+                    "section_blocks": [ 1 ]
+                },
+                {
+                    "section_repeat": 1,
+                    "section_blocks": [ 2 ]
                 }
             ]
         }

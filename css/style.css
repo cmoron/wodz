@@ -1,16 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400);
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font: 1.15em "Source Sans Pro", sans-serif;
+    color: #333;
 }
 
 h1 {
     text-align: center;
+    border-bottom: 2px dashed #a00;
 }
 
 h2 {
-    color: #fff;
-    background: #a00;
+    background: #fdb;
     padding: 5px 5px 5px 20px;
     cursor: pointer;
+    border: 1px solid #a00;
 }
 
 h3 {
@@ -23,7 +27,7 @@ h3 {
 
 .ex_li {
     list-style-type: none;
-    background: #ccf;
+    background: #ddf;
     margin-bottom: 5px;
 }
 .ex_repeat {
@@ -45,7 +49,7 @@ table{
     border-spacing: 0 5px;
 }
 th {
-    background: #a00;
+    background: #800;
     color: #fff;
     text-align: center;
     padding: 0px 0px 0px 0px;
