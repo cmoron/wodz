@@ -49,9 +49,10 @@ class Wod {
         }
         return str;
     }
-    toString() {
+    toString(even) {
         let str = "<div class=\"wod\">";
-        str = "<h2 id=\"" + this.eventId + "\">" + this.name + "</h2>";
+        str += even ? "<h2 class=\"even\"" : "<h2 class=\"odd\"";
+        str += " id=\"" + this.eventId + "\">" + this.name + "</h2>";
         str += "<div class=\"wod_content\" id=\"" + this.id + "\">";
         str += this.displayWodContent();
         str += "</div>";
@@ -188,8 +189,10 @@ class WodzDisplayer {
      */
     generateWodzListHTML() {
         let wodzHTML = "";
+        let even = true;
         this.wodz.forEach(wod => {
-            wodzHTML += wod.toString();
+            wodzHTML += wod.toString(even);
+            even = !even;
         });
         return wodzHTML;
     }

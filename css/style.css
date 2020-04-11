@@ -1,62 +1,75 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400);
-
 body {
-    font: 1.15em "Source Sans Pro", sans-serif;
-    color: #333;
+    font-family: Roboto;
+    background: #FFF5ED;
 }
 
 h1 {
     text-align: center;
-    border-bottom: 2px dashed #a00;
+    color: #412722;
 }
 
 h2 {
-    background: #fdb;
     padding: 5px 5px 5px 20px;
     cursor: pointer;
-    border: 1px solid #a00;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h2.even {
+    color: #412722;
+    background: #EEE0CB;
+}
+
+h2.odd {
+    color: #412722;
+    background : #DCCABA;
 }
 
 h3 {
-    color: #a00;
+    color: #db504a;
 }
 
 .ex_repeat {
     margin-right: 10px;
 }
 
+.ex_ul {
+    padding-left: 20px;
+}
+
 .ex_li {
     list-style-type: none;
-    background: #ddf;
     margin-bottom: 5px;
+    background: #EEE0CB;
 }
 .ex_repeat {
-    background: #005;
     color: #fff;
+    background: #412722;
     display: inline-block;
     padding: 10px 0px 10px 0px;
     text-align: center;
-    width: 50px;
+    width: 60px;
 }
 
 .structure_content {
-    padding-left: 40px; /* Default ul padding. */
+    padding-left: 20px;
 }
 
 table{
     width: 100%;
     border-collapse:separate;
     border-spacing: 0 5px;
+    margin-bottom: 25px;
 }
 th {
-    background: #800;
+    background: #412722;
     color: #fff;
     text-align: center;
     padding: 0px 0px 0px 0px;
-    width: 50px;
+    width: 60px;
 }
 
 td {
-    background: #fcc;
+    background : #DCCABA;
     padding-left: 10px;
 }
