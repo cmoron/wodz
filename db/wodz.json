@@ -1,643 +1,660 @@
 {
-    "wodz": [
+  "wodz": [
+    {
+      "name": "Estelle épaules",
+      "blocks": [
         {
-            "wod_name": "Estelle épaules",
-            "wod_blocks": [
-                {
-                    "wod_block_id": 1,
-                    "wod_block_name": "BLOC MUSCU",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Decline Push-ups Step",
-                            "ex_rep": "15"
-                        },
-                        {
-                            "ex_name": "Dumbbell Shrugs",
-                            "ex_rep": "30"
-                        },
-                        {
-                            "ex_name": "Dumbbell Row",
-                            "ex_rep": "2*15"
-                        },
-                        {
-                            "ex_name": "Dumbbell lateral raise",
-                            "ex_rep": "10"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 2,
-                    "wod_block_name": "BLOC CARDIO",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Step pieds alternés",
-                            "ex_rep": "1'"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 3,
-                    "wod_block_name": "BLOC GAINAGE",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Gainage",
-                            "ex_rep": "1'"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 4,
-                    "wod_block_name": "BLOC VACUUM",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Vacuum",
-                            "ex_rep": "5'"
-                        }
-                    ]
-                }
-            ],
-            "wod_structure": [
-                {
-                    "section_repeat": 3,
-                    "section_blocks": [ 2, 3 ]
-                },
-                {
-                    "section_repeat": 5,
-                    "section_blocks": [ 1, 2 ]
-                },
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 4 ]
-                }
-            ]
+          "id": 1,
+          "name": "BLOC MUSCU",
+          "exercises": [
+            {
+              "name": "Decline Push-ups Step",
+              "repeat": "15"
+            },
+            {
+              "name": "Dumbbell Shrugs",
+              "repeat": "30"
+            },
+            {
+              "name": "Dumbbell Row",
+              "repeat": "2*15"
+            },
+            {
+              "name": "Dumbbell lateral raise",
+              "repeat": "10"
+            }
+          ]
         },
         {
-            "wod_name": "Estelle jambes",
-            "wod_blocks": [
-                {
-                    "wod_block_id": 1,
-                    "wod_block_name": "BLOC CARDIO",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Single under",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Gainage",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Single under",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Gainage",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Single under",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Gainage",
-                            "ex_rep": "1'"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 2,
-                    "wod_block_name": "BLOC MUSCU 1",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Crunchs",
-                            "ex_rep": "100"
-                        },
-                        {
-                            "ex_name": "Squats",
-                            "ex_rep": "80"
-                        },
-                        {
-                            "ex_name": "Deadlift",
-                            "ex_rep": "50"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 3,
-                    "wod_block_name": "BLOC MUSCU 2",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Hip thrust",
-                            "ex_rep": "50"
-                        },
-                        {
-                            "ex_name": "Push ups",
-                            "ex_rep": "30"
-                        },
-                        {
-                            "ex_name": "Row crunch",
-                            "ex_rep": "20"
-                        }
-                    ]
-                }
-            ],
-            "wod_structure": [
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 1 ]
-                },
-                {
-                    "section_repeat": 2,
-                    "section_blocks": [ 2 ]
-                },
-                {
-                    "section_repeat": 3,
-                    "section_blocks": [ 3 ]
-                },
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 1 ]
-                }
-            ]
+          "id": 2,
+          "name": "BLOC CARDIO",
+          "exercises": [
+            {
+              "name": "Step pieds alternés",
+              "repeat": "1'"
+            }
+          ]
         },
         {
-            "wod_name": "Estelle jambes 2",
-            "wod_blocks": [
-                {
-                    "wod_block_id": 1,
-                    "wod_block_name": "BLOC CARDIO",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Montées de genoux stepper",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Jumping Jacks",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Boxing warm up",
-                            "ex_rep": "1'"
-                        } 
-                    ]
-                },
-                {
-                    "wod_block_id": 2,
-                    "wod_block_name": "BLOC MUSCU",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Fentes haltères",
-                            "ex_rep": "2*10"
-                        },
-                        {
-                            "ex_name": "Deadlift Kettlebell",
-                            "ex_rep": "30"
-                        },
-                        {
-                            "ex_name": "Hip thrust one leg",
-                            "ex_rep": "2*10"
-                        },
-                        {
-                            "ex_name": "Squats chargés (60kg)",
-                            "ex_rep": "5"
-                        },
-                        {
-                            "ex_name": "Plank",
-                            "ex_rep": "1'"
-                        }
-                    ]
-                }
-            ],
-            "wod_structure": [
-                {
-                    "section_repeat": 2,
-                    "section_blocks": [ 1 ]
-                },
-                {
-                    "section_repeat": 5,
-                    "section_blocks": [ 2 ]
-                },
-                {
-                    "section_repeat": 2,
-                    "section_blocks": [ 1 ]
-                } 
-            ]
+          "id": 3,
+          "name": "BLOC GAINAGE",
+          "exercises": [
+            {
+              "name": "Gainage",
+              "repeat": "1'"
+            }
+          ]
         },
         {
-            "wod_name": "Estelle abdos",
-            "wod_blocks": [
-                {
-                    "wod_block_id": 1,
-                    "wod_block_name": "BLOC WARM UP",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Étirements abdos",
-                            "ex_rep": "5'"
-                        },
-                        {
-                            "ex_name": "Vacuum",
-                            "ex_rep": "5'"
-                        } 
-                    ]
-                },
-                {
-                    "wod_block_id": 2,
-                    "wod_block_name": "BLOC CARDIO",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Single under",
-                            "ex_rep": "1'30"
-                        },
-                        {
-                            "ex_name": "Plank",
-                            "ex_rep": "1'30"
-                        },
-                        {
-                            "ex_name": "Single under",
-                            "ex_rep": "1'30"
-                        },
-                        {
-                            "ex_name": "Plank",
-                            "ex_rep": "1'30"
-                        },
-                        {
-                            "ex_name": "Single under",
-                            "ex_rep": "1'30"
-                        },
-                        {
-                            "ex_name": "Plank",
-                            "ex_rep": "1'30"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 3,
-                    "wod_block_name": "BLOC MUSCU 1",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Horloge jambes obliques",
-                            "ex_rep": "10"
-                        },
-                        {
-                            "ex_name": "Crunchs obliques",
-                            "ex_rep": "2*50"
-                        },
-                        {
-                            "ex_name": "Obliques kettlebell",
-                            "ex_rep": "2*30"
-                        },
-                        {
-                            "ex_name": "Superman",
-                            "ex_rep": "20\""
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 4,
-                    "wod_block_name": "BLOC MUSCU 2",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Crunchs",
-                            "ex_rep": "100"
-                        },
-                        {
-                            "ex_name": "Relevés jambes tendus à 2",
-                            "ex_rep": "10"
-                        }
-                    ]
-                }
-            ],
-            "wod_structure": [
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 1 ]
-                },
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 2 ]
-                },
-                {
-                    "section_repeat": 3,
-                    "section_blocks": [ 3 ]
-                },
-                {
-                    "section_repeat": 3,
-                    "section_blocks": [ 4 ]
-                }
-            ]
-        },
-        {
-            "wod_name": "Estelle upper body",
-            "wod_blocks": [
-                {
-                    "wod_block_id": 1,
-                    "wod_block_name": "BLOC CARDIO",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Mountain climber (20-20-20)",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Push ups",
-                            "ex_rep": "15(10)"
-                        },
-                        {
-                            "ex_name": "Mountain climber (20-20-20)",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Push ups",
-                            "ex_rep": "15(10)"
-                        },
-                        {
-                            "ex_name": "Mountain climber (20-20-20)",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Push ups",
-                            "ex_rep": "15(10)"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 2,
-                    "wod_block_name": "BLOC MUSCU",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Curls biceps",
-                            "ex_rep": "20"
-                        },
-                        {
-                            "ex_name": "Pull ups",
-                            "ex_rep": "7(5)"
-                        },
-                        {
-                            "ex_name": "Plank",
-                            "ex_rep": "1'"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 3,
-                    "wod_block_name": "BLOC MUSCU 2",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Développé Arnold",
-                            "ex_rep": "20"
-                        },
-                        {
-                            "ex_name": "Triceps Kettlebell",
-                            "ex_rep": "20"
-                        },
-                        {
-                            "ex_name": "Plank",
-                            "ex_rep": "1'"
-                        }
-                    ]
-                }
-            ],
-            "wod_structure": [
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 1 ]
-                },
-                {
-                    "section_repeat": 3,
-                    "section_blocks": [ 2 ]
-                },
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 1 ]
-                },
-                {
-                    "section_repeat": 3,
-                    "section_blocks": [ 3 ]
-                },
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 1 ]
-                }
-            ]
-        },
-        {
-            "wod_name": "Estelle abdos/fessiers - isométrique",
-            "wod_blocks": [
-                {
-                    "wod_block_id": 1,
-                    "wod_block_name": "BLOC ÉTIREMENTS",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Étirement fessiers pyramidal",
-                            "ex_rep": "Libre"
-                        },
-                        {
-                            "ex_name": "Étirement fessiers et psoas",
-                            "ex_rep": "Libre"
-                        },
-                        {
-                            "ex_name": "Étirements pelvi-trochantérien",
-                            "ex_rep": "Libre"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 2,
-                    "wod_block_name": "BLOC MUSCU",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Gainage vélo chargé",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Chaise 45° sans mur",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Fire hydrants chargés (*2)",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Hip Thrust 1 leg (*2)",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Deadlift",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Gainage dos",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Abduction jambe gainage latéral chargé",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Hollow body hold",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Superman",
-                            "ex_rep": "1'"
-                        }
-                    ]
-                }
-            ],
-            "wod_structure": [
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 1 ]
-                },
-                {
-                    "section_repeat": 5,
-                    "section_blocks": [ 2 ]
-                }
-            ]
-        },
-        {
-            "wod_name": "Estelle cardio",
-            "wod_blocks": [
-                {
-                    "wod_block_id": 1,
-                    "wod_block_name": "BLOC EF",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Stepper standard",
-                            "ex_rep": "5'"
-                        },
-                        {
-                            "ex_name": "Plank",
-                            "ex_rep": "1'"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 2,
-                    "wod_block_name": "BLOC TEMPO",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Burpees",
-                            "ex_rep": "2'"
-                        },
-                        {
-                            "ex_name": "Single under",
-                            "ex_rep": "2'"
-                        },
-                        {
-                            "ex_name": "Recup",
-                            "ex_rep": "2'"
-                        }
-                    ]
-                }
-            ],
-            "wod_structure": [
-                {
-                    "section_repeat": 4,
-                    "section_blocks": [ 1 ]
-                },
-                {
-                    "section_repeat": 3,
-                    "section_blocks": [ 2 ]
-                },
-                {
-                    "section_repeat": 4,
-                    "section_blocks": [ 1 ]
-                }
-            ]
-        },
-        {
-            "wod_name": "Cyril pecs / dos",
-            "wod_blocks": [
-                {
-                    "wod_block_id": 1,
-                    "wod_block_name": "BLOC CARDIO",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Single under",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Plank",
-                            "ex_rep": "1'"
-                        },
-                        {
-                            "ex_name": "Jumping Jack",
-                            "ex_rep": "1'"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 2,
-                    "wod_block_name": "BLOC MUSCU",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Push ups",
-                            "ex_rep": "150"
-                        },
-                        {
-                            "ex_name": "Dumbell hammer curls",
-                            "ex_rep": "50"
-                        },
-                        {
-                            "ex_name": "Pull ups",
-                            "ex_rep": "50"
-                        }
-                    ]
-                }
-            ],
-            "wod_structure": [
-                {
-                    "section_repeat": 6,
-                    "section_blocks": [ 1 ]
-                },
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 2 ]
-                }
-            ]
-        },
-        {
-            "wod_name": "Cyril Boxe",
-            "wod_blocks": [
-                {
-                    "wod_block_id": 1,
-                    "wod_block_name": "BLOC CARDIO",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Boxing warm up",
-                            "ex_rep": "30\""
-                        },
-                        {
-                            "ex_name": "Push ups",
-                            "ex_rep": "10"
-                        },
-                        {
-                            "ex_name": "Air squats",
-                            "ex_rep": "20"
-                        }
-                    ]
-                },
-                {
-                    "wod_block_id": 2,
-                    "wod_block_name": "BLOC BOXE",
-                    "wod_block_ex": [
-                        {
-                            "ex_name": "Boxe training",
-                            "ex_rep": "1"
-                        }
-                    ]
-                }
-            ],
-            "wod_structure": [
-                {
-                    "section_repeat": 10,
-                    "section_blocks": [ 1 ]
-                },
-                {
-                    "section_repeat": 1,
-                    "section_blocks": [ 2 ]
-                }
-            ]
+          "id": 4,
+          "name": "BLOC VACUUM",
+          "exercises": [
+            {
+              "name": "Vacuum",
+              "repeat": "5'"
+            }
+          ]
         }
-    ]
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 3,
+            "blocks": [ 2, 3 ]
+          },
+          {
+            "repeat": 5,
+            "blocks": [ 1, 2 ]
+          },
+          {
+            "repeat": 1,
+            "blocks": [ 4 ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Estelle jambes",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOC CARDIO",
+          "exercises": [
+            {
+              "name": "Single under",
+              "repeat": "1'"
+            },
+            {
+              "name": "Gainage",
+              "repeat": "1'"
+            },
+            {
+              "name": "Single under",
+              "repeat": "1'"
+            },
+            {
+              "name": "Gainage",
+              "repeat": "1'"
+            },
+            {
+              "name": "Single under",
+              "repeat": "1'"
+            },
+            {
+              "name": "Gainage",
+              "repeat": "1'"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "BLOC MUSCU 1",
+          "exercises": [
+            {
+              "name": "Crunchs",
+              "repeat": "100"
+            },
+            {
+              "name": "Squats",
+              "repeat": "80"
+            },
+            {
+              "name": "Deadlift",
+              "repeat": "50"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "BLOC MUSCU 2",
+          "exercises": [
+            {
+              "name": "Hip thrust",
+              "repeat": "50"
+            },
+            {
+              "name": "Push ups",
+              "repeat": "30"
+            },
+            {
+              "name": "Row crunch",
+              "repeat": "20"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 1,
+            "blocks": [ 1 ]
+          },
+          {
+            "repeat": 2,
+            "blocks": [ 2 ]
+          },
+          {
+            "repeat": 3,
+            "blocks": [ 3 ]
+          },
+          {
+            "repeat": 1,
+            "blocks": [ 1 ]
+          }
+        ]}
+    },
+    {
+      "name": "Estelle jambes 2",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOC CARDIO",
+          "exercises": [
+            {
+              "name": "Montées de genoux stepper",
+              "repeat": "1'"
+            },
+            {
+              "name": "Jumping Jacks",
+              "repeat": "1'"
+            },
+            {
+              "name": "Boxing warm up",
+              "repeat": "1'"
+            } 
+          ]
+        },
+        {
+          "id": 2,
+          "name": "BLOC MUSCU",
+          "exercises": [
+            {
+              "name": "Fentes haltères",
+              "repeat": "2*10"
+            },
+            {
+              "name": "Deadlift Kettlebell",
+              "repeat": "30"
+            },
+            {
+              "name": "Hip thrust one leg",
+              "repeat": "2*10"
+            },
+            {
+              "name": "Squats chargés (60kg)",
+              "repeat": "5"
+            },
+            {
+              "name": "Plank",
+              "repeat": "1'"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 2,
+            "blocks": [ 1 ]
+          },
+          {
+            "repeat": 5,
+            "blocks": [ 2 ]
+          },
+          {
+            "repeat": 2,
+            "blocks": [ 1 ]
+          } 
+        ]
+      }
+    },
+    {
+      "name": "Estelle abdos",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOC WARM UP",
+          "exercises": [
+            {
+              "name": "Étirements abdos",
+              "repeat": "5'"
+            },
+            {
+              "name": "Vacuum",
+              "repeat": "5'"
+            } 
+          ]
+        },
+        {
+          "id": 2,
+          "name": "BLOC CARDIO",
+          "exercises": [
+            {
+              "name": "Single under",
+              "repeat": "1'30"
+            },
+            {
+              "name": "Plank",
+              "repeat": "1'30"
+            },
+            {
+              "name": "Single under",
+              "repeat": "1'30"
+            },
+            {
+              "name": "Plank",
+              "repeat": "1'30"
+            },
+            {
+              "name": "Single under",
+              "repeat": "1'30"
+            },
+            {
+              "name": "Plank",
+              "repeat": "1'30"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "BLOC MUSCU 1",
+          "exercises": [
+            {
+              "name": "Horloge jambes obliques",
+              "repeat": "10"
+            },
+            {
+              "name": "Crunchs obliques",
+              "repeat": "2*50"
+            },
+            {
+              "name": "Obliques kettlebell",
+              "repeat": "2*30"
+            },
+            {
+              "name": "Superman",
+              "repeat": "20\""
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "BLOC MUSCU 2",
+          "exercises": [
+            {
+              "name": "Crunchs",
+              "repeat": "100"
+            },
+            {
+              "name": "Relevés jambes tendus à 2",
+              "repeat": "10"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 1,
+            "blocks": [ 1 ]
+          },
+          {
+            "repeat": 1,
+            "blocks": [ 2 ]
+          },
+          {
+            "repeat": 3,
+            "blocks": [ 3 ]
+          },
+          {
+            "repeat": 3,
+            "blocks": [ 4 ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Estelle upper body",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOC CARDIO",
+          "exercises": [
+            {
+              "name": "Mountain climber (20-20-20)",
+              "repeat": "1'"
+            },
+            {
+              "name": "Push ups",
+              "repeat": "15(10)"
+            },
+            {
+              "name": "Mountain climber (20-20-20)",
+              "repeat": "1'"
+            },
+            {
+              "name": "Push ups",
+              "repeat": "15(10)"
+            },
+            {
+              "name": "Mountain climber (20-20-20)",
+              "repeat": "1'"
+            },
+            {
+              "name": "Push ups",
+              "repeat": "15(10)"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "BLOC MUSCU",
+          "exercises": [
+            {
+              "name": "Curls biceps",
+              "repeat": "20"
+            },
+            {
+              "name": "Pull ups",
+              "repeat": "7(5)"
+            },
+            {
+              "name": "Plank",
+              "repeat": "1'"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "BLOC MUSCU 2",
+          "exercises": [
+            {
+              "name": "Développé Arnold",
+              "repeat": "20"
+            },
+            {
+              "name": "Triceps Kettlebell",
+              "repeat": "20"
+            },
+            {
+              "name": "Plank",
+              "repeat": "1'"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 1,
+            "blocks": [ 1 ]
+          },
+          {
+            "repeat": 3,
+            "blocks": [ 2 ]
+          },
+          {
+            "repeat": 1,
+            "blocks": [ 1 ]
+          },
+          {
+            "repeat": 3,
+            "blocks": [ 3 ]
+          },
+          {
+            "repeat": 1,
+            "blocks": [ 1 ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Estelle abdos/fessiers - isométrique",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOC ÉTIREMENTS",
+          "exercises": [
+            {
+              "name": "Étirement fessiers pyramidal",
+              "repeat": "Libre"
+            },
+            {
+              "name": "Étirement fessiers et psoas",
+              "repeat": "Libre"
+            },
+            {
+              "name": "Étirements pelvi-trochantérien",
+              "repeat": "Libre"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "BLOC MUSCU",
+          "exercises": [
+            {
+              "name": "Gainage vélo chargé",
+              "repeat": "1'"
+            },
+            {
+              "name": "Chaise 45° sans mur",
+              "repeat": "1'"
+            },
+            {
+              "name": "Fire hydrants chargés (*2)",
+              "repeat": "1'"
+            },
+            {
+              "name": "Hip Thrust 1 leg (*2)",
+              "repeat": "1'"
+            },
+            {
+              "name": "Deadlift",
+              "repeat": "1'"
+            },
+            {
+              "name": "Gainage dos",
+              "repeat": "1'"
+            },
+            {
+              "name": "Abduction jambe gainage latéral chargé",
+              "repeat": "1'"
+            },
+            {
+              "name": "Hollow body hold",
+              "repeat": "1'"
+            },
+            {
+              "name": "Superman",
+              "repeat": "1'"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 1,
+            "blocks": [ 1 ]
+          },
+          {
+            "repeat": 5,
+            "blocks": [ 2 ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Estelle cardio",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOC EF",
+          "exercises": [
+            {
+              "name": "Stepper standard",
+              "repeat": "5'"
+            },
+            {
+              "name": "Plank",
+              "repeat": "1'"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "BLOC TEMPO",
+          "exercises": [
+            {
+              "name": "Burpees",
+              "repeat": "2'"
+            },
+            {
+              "name": "Single under",
+              "repeat": "2'"
+            },
+            {
+              "name": "Recup",
+              "repeat": "2'"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 4,
+            "blocks": [ 1 ]
+          },
+          {
+            "repeat": 3,
+            "blocks": [ 2 ]
+          },
+          {
+            "repeat": 4,
+            "blocks": [ 1 ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cyril pecs / dos",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOC CARDIO",
+          "exercises": [
+            {
+              "name": "Single under",
+              "repeat": "1'"
+            },
+            {
+              "name": "Plank",
+              "repeat": "1'"
+            },
+            {
+              "name": "Jumping Jack",
+              "repeat": "1'"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "BLOC MUSCU",
+          "exercises": [
+            {
+              "name": "Push ups",
+              "repeat": "150"
+            },
+            {
+              "name": "Dumbell hammer curls",
+              "repeat": "50"
+            },
+            {
+              "name": "Pull ups",
+              "repeat": "50"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 6,
+            "blocks": [ 1 ]
+          },
+          {
+            "repeat": 1,
+            "blocks": [ 2 ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cyril Boxe",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOC CARDIO",
+          "exercises": [
+            {
+              "name": "Boxing warm up",
+              "repeat": "30\""
+            },
+            {
+              "name": "Push ups",
+              "repeat": "10"
+            },
+            {
+              "name": "Air squats",
+              "repeat": "20"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "BLOC BOXE",
+          "exercises": [
+            {
+              "name": "Boxe training",
+              "repeat": "1"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 10,
+            "blocks": [ 1 ]
+          },
+          {
+            "repeat": 1,
+            "blocks": [ 2 ]
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -1,3 +1,4 @@
+"use strict";
 class JSONReader {
     constructor(fileName) {
         this.fileName = fileName;
