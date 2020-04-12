@@ -76,63 +76,6 @@ export interface DbGroup {
     blocks: number[];
 }
 
-export class WodAdapter {
-
-    data: Db;
-
-    constructor(data: Db) {
-        this.data = data;
-    }
-
-    public parseData(): Wod[] {
-        let wodz: Wod[] = [];
-
-        for(let dbWod of this.data.wodz) {
-            wodz.push(this.parseWod(dbWod));
-        }
-
-        return wodz;
-    }
-
-    private parseWod(dbWod: DbWod): Wod {
-        return new Wod(dbWod.name, this.parseBlocks(dbWod.blocks), this.parseStructure(dbWod.structure));
-    }
-
-    private parseBlocks(dbBlocks: DbBlock[]): Block[] {
-        let blocks: Block[] = [];
-
-        for(let dbBlock of dbBlocks) {
-            blocks.push(new Block(dbBlock.id, dbBlock.name, this.parseExercises(dbBlock.exercises)));
-        }
-
-        return blocks;
-    }
-
-    private parseExercises(dbExercises: DbExercise[]): Exercise[] {
-        let exercises: Exercise[] = [];
-
-        for(let dbExercise of dbExercises) {
-            exercises.push(new Exercise(dbExercise.name, dbExercise.repeat));
-        }
-
-        return exercises;
-    }
-
-    private parseStructure(dbStructure: DbStructure): Structure {
-        return new Structure(this.parseGroups(dbStructure));
-    }
-
-    private parseGroups(dbStructure: DbStructure): Group[] {
-        let groups: Group[] = [];
-
-        for(let dbGroup of dbStructure.groups) {
-            groups.push(new Group(dbGroup.repeat, dbGroup.blocks));
-        }
-
-        return groups;
-    }
-}
-
 export class Exercise implements DbExercise {
     name: string;
     repeat: string;
@@ -155,17 +98,17 @@ export class Block implements DbBlock {
     }
 }
 
-export class Group implements DbGroup {
+export class Group {
     repeat: number;
-    blocks: number[];
+    blocks: Block[];
 
-    constructor(repeat: number, blocks: number[]) {
+    constructor(repeat: number, blocks: Block[]) {
         this.repeat = repeat;
         this.blocks = blocks;
     }
 }
 
-export class Structure implements DbStructure {
+export class Structure {
 
     /* The structure group list. */
     groups: Group[];
@@ -173,37 +116,22 @@ export class Structure implements DbStructure {
     constructor(groups: Group[]) {
         this.groups = groups;
     }
-
-    toString(): string {
-        let str = "Structure object tostring : ";
-
-        return str;
-    }
 }
 
-export class Wod implements DbWod {
+export class Wod {
 
     /* The wod name. */
     name: string;
 
     /* The wod blocks list. */
-    blocks: Block[];
+    blocks: Map<number, Block>;
 
     /* The wod structure. */
     structure: Structure;
 
-    constructor(name: string, blocks: Block[], structure: Structure) {
+    constructor(name: string, blocks: Map<number, Block>, structure: Structure) {
         this.name = name;
         this.blocks = blocks;
         this.structure = structure;
-    }
-
-    toString(): string {
-        let str = "Wod object tostring : ";
-
-        str += this.name;
-        str += this.structure.toString();
-
-        return str;
     }
 }
