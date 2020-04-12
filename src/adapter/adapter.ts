@@ -1,29 +1,17 @@
-import {
-    Db,
-    DbWod,
-    DbBlock,
-    DbExercise,
-    DbStructure,
-    DbGroup,
-    Wod,
-    Block,
-    Exercise,
-    Structure,
-    Group
-} from "../models/models.js";
+import { Db, DbWod, DbBlock, DbExercise, DbStructure, DbGroup} from "../models/models.js";
+import { Wod, Block, Exercise, Structure, Group } from "../models/models.js";
 
-export class WodAdapter {
+/*
+ * The WodzAdapter class.
+ * Parse the JSON database and instanciates models.
+ */
+export class WodzAdapter {
 
-    data: Db;
-
-    constructor(data: Db) {
-        this.data = data;
-    }
-
-    public parseData(): Wod[] {
+    /* Parses the JSON data and return an array of Wod objects. */
+    public parseData(data: Db): Wod[] {
         let wodz: Wod[] = [];
 
-        for(let dbWod of this.data.wodz) {
+        for(let dbWod of data.wodz) {
             wodz.push(this.parseWod(dbWod));
         }
 
@@ -65,10 +53,11 @@ export class WodAdapter {
 
         for(let dbGroup of dbStructure.groups) {
             let groupBlocks: Block[] = [];
+
             for (let blockId of dbGroup.blocks) {
-                let b = blocks.get(blockId);
-                if (null != b) {
-                    groupBlocks.push(b);
+                let block = blocks.get(blockId);
+                if (null != block) {
+                    groupBlocks.push(block);
                 }
             }
             groups.push(new Group(dbGroup.repeat, groupBlocks));

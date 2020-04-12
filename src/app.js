@@ -1,4 +1,10 @@
+import { WodzAdapter } from "./adapter/adapter.js";
 import { WodzDisplayer } from "./view/view.js";
+/*
+ * JSonReader class.
+ * Creates the xmlhttp request to read json file data.
+ * Send results to callback function.
+ */
 class JSONReader {
     constructor(fileName) {
         this.fileName = fileName;
@@ -8,7 +14,6 @@ class JSONReader {
         xmlhttp.overrideMimeType("application/json");
         xmlhttp.open("GET", this.fileName, true);
         xmlhttp.onreadystatechange = () => {
-            console.log(this.fileName);
             if (xmlhttp.readyState === 4 && xmlhttp.status == 200) {
                 // Reference to app instance.
                 callback(xmlhttp.responseText);
@@ -17,31 +22,46 @@ class JSONReader {
         xmlhttp.send(null);
     }
 }
+/* The Wodz App. */
 class App {
     constructor() {
+        /* The displayer instance. */
         this.wodzDisplayer = new WodzDisplayer();
+        /* The data adapter instance. */
+        this.wodzAdapter = new WodzAdapter();
     }
-    init() {
-        this.readData();
-    }
-    run(data) {
-        this.wodzDisplayer.prepareData(data);
-        this.wodzDisplayer.display();
-        this.wodzDisplayer.initEvents();
-    }
-    /*
-     * Read wodz object from json file.
+    /* App entry point.
+     * Reads wod data from server side json file.
+     * Runs App on data response.
      */
-    readData() {
-        let reader = new JSONReader(App.DB_FILE_PATH);
-        reader.read((response) => {
-            this.run(JSON.parse(response));
-        });
+    init() {
+        if (!this.checkCompatibility()) {
+            document.getElementsByTagName('body')[0].innerHTML = "Please upgrade your browser.";
+        }
+        else {
+            let reader = new JSONReader(App.DB_FILE_PATH);
+            reader.read((response) => {
+                this.run(JSON.parse(response));
+            });
+        }
+    }
+    /* Runs the app when data are loaded (see readData). */
+    run(data) {
+        this.wodzDisplayer.display(this.wodzAdapter.parseData(data));
+    }
+    /* Checks the client compatibility to ES6. */
+    checkCompatibility() {
+        try {
+            Function("() => {};");
+            return true;
+        }
+        catch (exception) {
+            return false;
+        }
     }
 }
+/* The server side json data path. */
 App.DB_FILE_PATH = "db/wodz.json";
-/*
- * Program entry point.
- */
+/* Program entry point. */
 let app = new App();
 app.init();

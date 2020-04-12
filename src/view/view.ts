@@ -1,37 +1,40 @@
-import {
-    Db,
-    Wod,
-    Block,
-    Exercise,
-    Structure,
-    Group
-} from "../models/models.js";
-import { WodAdapter } from "../adapter/adapter.js";
+import {Db, Wod, Block, Exercise, Structure, Group} from "../models/models.js";
 
+/*
+ * Displays the Wodz objects in HTML format.
+ */
 export class WodzDisplayer {
 
+    /* The wodz div id. */
     private static readonly WODZ_DIV_ID = "wodz_page";
-    wodzHTML: WodHTML[] = [];
 
-    public prepareData(data: Db) {
-        let adapter: WodAdapter = new WodAdapter(data);
+    /* The Wod HTML object list. */
+    private wodzHTML: WodHTML[] = [];
 
-        for (let wod of adapter.parseData()) {
+    /* Get data from adapter. */
+    private prepareData(data: Wod[]) {
+        for (let wod of data) {
             this.wodzHTML.push(new WodHTML(wod));
         }
     }
 
-    /*
-     * Display the wod data in the HTML page.
-     */
-    public display() {
+    /* Initialize events for html components. */
+    private initEvents() {
+        for (let wodHTML of this.wodzHTML) {
+            wodHTML.initEvents();
+        }
+    }
 
+    /* Generate the HTML page for wodz data and publish in document. */
+    private generateHTML() {
         let html = "";
+
+        /* even/odd boolean for Wod CSS class. */
         let even: boolean = false;
 
         for (let wodHTML of this.wodzHTML) {
             wodHTML.even = even;
-            html += wodHTML.toString();
+            html += wodHTML.html();
             even = !even;
         }
 
@@ -41,28 +44,30 @@ export class WodzDisplayer {
         }
     }
 
-    public initEvents() {
-        for (let wodHTML of this.wodzHTML) {
-            wodHTML.initEvents();
-        }
+    /* Display the wod data in the HTML page. */
+    public display(data: Wod[]) {
+        this.prepareData(data);
+        this.generateHTML();
+        this.initEvents();
     }
+
 }
 
 class BlockHTML {
-    block: Block;
+    private block: Block;
 
     constructor(block: Block) {
         this.block = block;
     }
 
-    toString(): string {
+    html(): string {
         let str = "";
         str += "<h3>" + this.block.name + "</h3>";
 
         str += "<ul class=\"ex_ul\">"
         this.block.exercises.forEach(ex => {
             str += "<li class=\"ex_li\">";
-            str += new ExerciseHTML(ex).toString();
+            str += new ExerciseHTML(ex).html();
             str += "</li>"
         });
         str += "</ul>"
@@ -78,7 +83,7 @@ class ExerciseHTML {
         this.exercise = exercise;
     }
 
-    toString(): string {
+    html(): string {
         let str = "<span class=\"exercise\">";
         str += "<span class=\"ex_repeat\">" + this.exercise.repeat + "</span>";
         str += "<span class=\"ex_name\">" + this.exercise.name + "</span>";
@@ -94,7 +99,7 @@ class StructureHTML {
         this.structure = structure;
     }
 
-    toString() {
+    public html(): string {
         let str = "<div class=\"structure\">";
         str += "<h3>WOD</h3>";
         str += "<div class=\"structure_content\">";
@@ -102,7 +107,7 @@ class StructureHTML {
 
         this.structure.groups.forEach(group => {
             str += "<tr>";
-            str += new GroupHTML(group).toString();
+            str += new GroupHTML(group).html();
             str += "</tr>";
         });
         str += "</table>";
@@ -119,7 +124,7 @@ class GroupHTML {
         this.group = group;
     }
 
-    toString() {
+    public html(): string {
         let str = "";
         str += "<th>" + this.group.repeat + "</th>";
 
@@ -137,20 +142,20 @@ class GroupHTML {
 
 class WodHTML {
 
-    public static lastId: number = 0;
-    id: string;
-    eventId: string;
-    wod: Wod;
-    display: boolean = false;
-    even: boolean = true;
+    public even: boolean = true;
+    private wod: Wod;
+    private static lastId: number = 0;
+    private htmlId: string;
+    private eventId: string;
+    private display: boolean = false;
 
     constructor(wod: Wod) {
-        this.id = "wod_" + ++WodHTML.lastId;
-        this.eventId = "wod_event_" + this.id;
+        this.htmlId = "wod_" + ++WodHTML.lastId;
+        this.eventId = "wod_event_" + this.htmlId;
         this.wod = wod;
     }
 
-    initEvents() {
+    public initEvents() {
         let evElem = document.getElementById(this.eventId);
         console.log(evElem);
         if (null != evElem) {
@@ -158,10 +163,11 @@ class WodHTML {
         }
     }
 
-    switchDisplay() {
+    /* Switches the display boolean and refresh the html document. */
+    private switchDisplay() {
         this.display = !this.display;
 
-        let elem = document.getElementById(this.id);
+        let elem = document.getElementById(this.htmlId);
         if (null != elem) {
             elem.innerHTML = this.displayWodContent();
         }
@@ -171,22 +177,22 @@ class WodHTML {
         let str = "";
         if (this.display) {
             this.wod.blocks.forEach(block => {
-                str += new BlockHTML(block).toString();
+                str += new BlockHTML(block).html();
             });
 
             if (null != this.wod.structure) {
-                str += new StructureHTML(this.wod.structure).toString();
+                str += new StructureHTML(this.wod.structure).html();
             }
         }
 
         return str;
     }
 
-    toString(): string {
+    public html(): string {
         let str = "<div class=\"wod\">";
         str += this.even ? "<h2 class=\"even\"" : "<h2 class=\"odd\"";
         str += " id=\"" + this.eventId + "\">" + this.wod.name + "</h2>";
-        str += "<div class=\"wod_content\" id=\"" + this.id + "\">";
+        str += "<div class=\"wod_content\" id=\"" + this.htmlId + "\">";
         str += this.displayWodContent();
         str += "</div>";
         str += "</div>";
