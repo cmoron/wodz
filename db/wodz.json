@@ -74,7 +74,7 @@
       }
     },
     {
-      "name": "Estelle jambes",
+      "name": "Estelle Full body",
       "blocks": [
         {
           "id": 1,
@@ -164,7 +164,7 @@
         ]}
     },
     {
-      "name": "Estelle jambes 2",
+      "name": "Estelle jambes",
       "blocks": [
         {
           "id": 1,
@@ -651,6 +651,59 @@
           },
           {
             "repeat": 1,
+            "blocks": [ 2 ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cyril épaules biceps abdos",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOC WARM UP",
+          "exercises": [
+            {
+              "name": "Global up body warmup",
+              "repeat": "5'"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "BLOC MUSCU",
+          "exercises": [
+            {
+              "name": "Arnold Dumbber press",
+              "repeat": "10"
+            },
+            {
+              "name": "Dumbell hammer curls",
+              "repeat": "20"
+            },
+            {
+              "name": "Dumbbell lateral raise",
+              "repeat": "10"
+            },
+            {
+              "name": "Crunchs",
+              "repeat": "100"
+            },
+            {
+              "name": "Dumbbell frontal raise",
+              "repeat": "10"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 1,
+            "blocks": [ 1 ]
+          },
+          {
+            "repeat": 5,
             "blocks": [ 2 ]
           }
         ]
