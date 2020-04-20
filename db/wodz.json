@@ -559,7 +559,68 @@
       }
     },
     {
-      "name": "Cyril pecs / dos",
+      "name": "Estelle triceps/épaules",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOC CARDIO",
+          "exercises": [
+            {
+              "name": "Single under",
+              "repeat": "1'30"
+            },
+            {
+              "name": "Plank",
+              "repeat": "1'30"
+            } 
+          ]
+        },
+        {
+          "id": 2,
+          "name": "BLOC MUSCU",
+          "exercises": [
+            {
+              "name": "Arnold Dumbbell press",
+              "repeat": "10"
+            },
+            {
+              "name": "Triceps Dumbbell",
+              "repeat": "2*10"
+            },
+            {
+              "name": "Dumbbell lateral raise",
+              "repeat": "10"
+            },
+            {
+              "name": "Loaded full crunchs",
+              "repeat": "10"
+            },
+            {
+              "name": "Dumbbell frontal raise",
+              "repeat": "10"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 3,
+            "blocks": [ 1 ]
+          },
+          {
+            "repeat": 5,
+            "blocks": [ 2 ]
+          },
+          {
+            "repeat": 3,
+            "blocks": [ 1 ]
+          } 
+        ]
+      }
+    },
+    {
+      "name": "Cyril pecs/dos",
       "blocks": [
         {
           "id": 1,
@@ -588,7 +649,7 @@
               "repeat": "150"
             },
             {
-              "name": "Dumbell hammer curls",
+              "name": "Dumbbell hammer curls",
               "repeat": "50"
             },
             {
@@ -674,11 +735,11 @@
           "name": "BLOC MUSCU",
           "exercises": [
             {
-              "name": "Arnold Dumbber press",
+              "name": "Arnold Dumbbell press",
               "repeat": "10"
             },
             {
-              "name": "Dumbell hammer curls",
+              "name": "Dumbbell hammer curls",
               "repeat": "20"
             },
             {
@@ -704,6 +765,96 @@
           },
           {
             "repeat": 5,
+            "blocks": [ 2 ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cyril pompes/tractions",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOC WARM UP",
+          "exercises": [
+            {
+              "name": "Row jump (tricks)",
+              "repeat": "5'"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "BLOCK MUSCU",
+          "exercises": [
+            {
+              "name": "Tractions",
+              "repeat": "10"
+            },
+            {
+              "name": "Pompes",
+              "repeat": "10"
+            },
+            {
+              "name": "Pompes lentes",
+              "repeat": "10"
+            },
+            {
+              "name": "Pompes",
+              "repeat": "10"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 1,
+            "blocks": [ 1 ]
+          },
+          {
+            "repeat": 7,
+            "blocks": [ 2 ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cyril pompes/curls",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOC WARM UP",
+          "exercises": [
+            {
+              "name": "Free",
+              "repeat": "5'"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "BLOCK MUSCU",
+          "exercises": [
+            {
+              "name": "Pompes 15/15/15/15/15/15/10",
+              "repeat": "100"
+            },
+            {
+              "name": "Curls 15/15/15/15/15/15/10",
+              "repeat": "100"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 1,
+            "blocks": [ 1 ]
+          },
+          {
+            "repeat": 3,
             "blocks": [ 2 ]
           }
         ]
