@@ -35,29 +35,14 @@ class App {
      * Runs App on data response.
      */
     init() {
-        if (!this.checkCompatibility()) {
-            document.getElementsByTagName('body')[0].innerHTML = "Please upgrade your browser.";
-        }
-        else {
-            let reader = new JSONReader(App.DB_FILE_PATH);
-            reader.read((response) => {
-                this.run(JSON.parse(response));
-            });
-        }
+        let reader = new JSONReader(App.DB_FILE_PATH);
+        reader.read((response) => {
+            this.run(JSON.parse(response));
+        });
     }
     /* Runs the app when data are loaded (see readData). */
     run(data) {
         this.wodzDisplayer.display(this.wodzAdapter.parseData(data));
-    }
-    /* Checks the client compatibility to ES6. */
-    checkCompatibility() {
-        try {
-            Function("() => {};");
-            return true;
-        }
-        catch (exception) {
-            return false;
-        }
     }
 }
 /* The server side json data path. */

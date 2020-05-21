@@ -181,7 +181,7 @@
             {
               "name": "Boxing warm up",
               "repeat": "1'"
-            } 
+            }
           ]
         },
         {
@@ -224,7 +224,7 @@
           {
             "repeat": 2,
             "blocks": [ 1 ]
-          } 
+          }
         ]
       }
     },
@@ -242,7 +242,7 @@
             {
               "name": "Vacuum",
               "repeat": "5'"
-            } 
+            }
           ]
         },
         {
@@ -572,7 +572,7 @@
             {
               "name": "Plank",
               "repeat": "1'30"
-            } 
+            }
           ]
         },
         {
@@ -615,7 +615,7 @@
           {
             "repeat": 3,
             "blocks": [ 1 ]
-          } 
+          }
         ]
       }
     },
@@ -856,6 +856,64 @@
           {
             "repeat": 3,
             "blocks": [ 2 ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cyril Pull ups variations",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOCK MUSCU",
+          "exercises": [
+            {
+              "name": "Pull up chin up",
+              "repeat": "8"
+            },
+            {
+              "name": "Typewriter pull up",
+              "repeat": "5"
+            },
+            {
+              "name": "Frontlever pull up",
+              "repeat": "5"
+            },
+            {
+              "name": "Pull up",
+              "repeat": "8"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 5,
+            "blocks": [ 1 ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cyril Push ups",
+      "blocks": [
+        {
+          "id": 1,
+          "name": "BLOCK MUSCU",
+          "exercises": [
+            {
+              "name": "Push up, starts every minute",
+              "repeat": "10"
+            }
+          ]
+        }
+      ],
+      "structure": {
+        "groups": [
+          {
+            "repeat": 30,
+            "blocks": [ 1 ]
           }
         ]
       }
