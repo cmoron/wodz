@@ -4,7 +4,7 @@ import { WodzDisplayer } from "./view/view.js";
 
 /*
  * JSonReader class.
- * Creates the xmlhttp request to read json file data.
+ * Creates the xmlhttp request to read json file data from server.
  * Send results to callback function.
  */
 class JSONReader {
